@@ -18,7 +18,7 @@ def start(message):
     
 
 
-# Кнопки, которые должны выходить с сообщением выше, после того, как пользователь нажимает на "Да"
+# Кнопки, которые должны выходить с сообщением ниже, после того, как пользователь нажимает на "Да"
 markup2 = types.ReplyKeyboardMarkup(resize_keyboard=True)
 item2 = types.KeyboardButton("Мат в 1 ход")
 item3 = types.KeyboardButton("Мат в 2 хода")
