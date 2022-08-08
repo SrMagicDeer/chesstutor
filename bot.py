@@ -15,9 +15,7 @@ def start(message):
     bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
 
 
-# Не работает нихуя, второе сообщение тупо не появляется после нажатия на кнопку "Да"
-
-@bot.message_handler(content_types=['level'])
+@bot.message_handler(content_types=['text'])
 def level(message):
     if message.text == "Да":
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
