@@ -19,7 +19,7 @@ def start(message):
 
 @bot.message_handler(content_types=['level'])
 def level(message):
-    if message.text == 'Да':
+    if message.text == "Да":
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn2 = types.KeyboardButton("Начинающий")
         btn3 = types.KeyboardButton("Продвинутый")
@@ -27,6 +27,15 @@ def level(message):
         markup.add(btn2, btn3, btn4)
         mess = f'Тогда, для начала, выбери <b>уровень сложности</b>, который тебе подходит'
         bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)
+
+    elif message.text == "Начинающий":
+        bot.send_message(message.chat.id, "Начинающий")
+
+    elif message.text == "Продвинутый":
+        bot.send.message(message.chat.id, "Продвинутый")
+
+    elif message.text == "Мастер спорта":
+        bot.send_message(message.chat.id, "Мастер спорта")
 
 
 bot.polling(none_stop=True)
